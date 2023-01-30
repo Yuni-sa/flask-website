@@ -1,0 +1,17 @@
+<!-- phones.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Noc</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    {% include 'navigation.html' %}
+    <h1>Phones</h1>
+    {{ table|safe }}
+  </body>
+</html>
