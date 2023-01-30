@@ -11,13 +11,13 @@ def home():
 @app.route("/servers")
 def servers():
     df = pd.read_excel("data.xlsx")
-    table = df.to_html()
+    table = df.to_html(classes='servers')
     return render_template("Servers.html", table=table)
 
 @app.route("/phones")
 def phones():
-    df = pd.read_excel("phones.xlsx")
-    table = df.to_html()
+    df = pd.read_excel("phones.xlsx",usecols=None)
+    table = df.to_html(classes='phones')
     return render_template("phones.html", table=table)
 
 if __name__ == '__main__':
